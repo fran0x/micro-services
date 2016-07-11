@@ -1,0 +1,1 @@
+Scripts for building Docker images based on JAR files and then launching Docker images via Docker Machine Swarm

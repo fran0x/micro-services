@@ -1,0 +1,1 @@
+App for edge service (dynamic routing, reverse proxy...) based on Spring Cloud and Netflix Zuul

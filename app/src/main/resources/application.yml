@@ -1,0 +1,34 @@
+server:
+  port: 9020
+
+spring:
+  application:
+    name: app
+  main:
+    banner-mode: "off"
+  mvc:
+    favicon:
+      enabled: false
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true  
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework: WARN
+    org.apache: WARN    
+    com.netflix: WARN
+  file: ./logs/app.log
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false

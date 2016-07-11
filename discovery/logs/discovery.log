@@ -1,0 +1,794 @@
+2016-07-02 18:32:36.128  WARN 10128 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 18:32:40.280  INFO 10128 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2016-07-02 18:32:40.285  INFO 10128 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2016-07-02 18:32:40.469  INFO 10128 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:32:40.471  INFO 10128 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:32:43.219  INFO 10128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2016-07-02 18:32:43.221  INFO 10128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2016-07-02 18:32:43.223  INFO 10128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:32:43.226  INFO 10128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:32:43.400  INFO 10128 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-02 18:32:44.624  INFO 10128 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2016-07-02 18:32:44.626  INFO 10128 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2016-07-02 18:32:44.629  INFO 10128 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2016-07-02 18:32:44.631  INFO 10128 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2016-07-02 18:32:44.635  INFO 10128 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2016-07-02 18:32:44.637  INFO 10128 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2016-07-02 18:32:44.640  INFO 10128 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2016-07-02 18:32:46.796 ERROR 10128 --- [main] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1017) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:931) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:441) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:304) [eureka-client-1.4.6.jar!/:1.4.6]
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:51) [spring-cloud-netflix-eureka-client-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:179) [spring-cloud-netflix-eureka-client-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$75e5b0eb.CGLIB$eurekaClient$1(<generated>) [spring-cloud-netflix-eureka-client-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$75e5b0eb$$FastClassBySpringCGLIB$$7f19e43b.invoke(<generated>) [spring-cloud-netflix-eureka-client-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$75e5b0eb.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$2.getObject(AbstractBeanFactory.java:345) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:359) [spring-cloud-context-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:176) [spring-cloud-context-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:340) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) [spring-aop-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:187) [spring-aop-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at com.sun.proxy.$Proxy67.getApplications(Unknown Source) [na:na]
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerConfiguration.peerAwareInstanceRegistry(EurekaServerConfiguration.java:161) [spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerConfiguration$$EnhancerBySpringCGLIB$$381128fc.CGLIB$peerAwareInstanceRegistry$6(<generated>) [spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerConfiguration$$EnhancerBySpringCGLIB$$381128fc$$FastClassBySpringCGLIB$$4b690bb9.invoke(<generated>) [spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerConfiguration$$EnhancerBySpringCGLIB$$381128fc.peerAwareInstanceRegistry(<generated>) [spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:813) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:464) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at com.flopezlasanta.discovery.Application.main(Application.java:14) [discovery-0.0.1-SNAPSHOT.jar!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:54) [discovery-0.0.1-SNAPSHOT.jar!/:0.0.1-SNAPSHOT]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_45]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_45]
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source) ~[na:1.8.0_45]
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source) ~[na:1.8.0_45]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source) ~[na:1.8.0_45]
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_45]
+	at java.net.PlainSocketImpl.connect(Unknown Source) ~[na:1.8.0_45]
+	at java.net.SocksSocketImpl.connect(Unknown Source) ~[na:1.8.0_45]
+	at java.net.Socket.connect(Unknown Source) ~[na:1.8.0_45]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:120) ~[httpclient-4.5.2.jar!/:4.5.2]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179) ~[httpclient-4.5.2.jar!/:4.5.2]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.2.jar!/:4.5.2]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.2.jar!/:4.5.2]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612) ~[httpclient-4.5.2.jar!/:4.5.2]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447) ~[httpclient-4.5.2.jar!/:4.5.2]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884) ~[httpclient-4.5.2.jar!/:4.5.2]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:117) ~[httpclient-4.5.2.jar!/:4.5.2]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55) ~[httpclient-4.5.2.jar!/:4.5.2]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar!/:1.19.1]
+	... 113 common frames omitted
+
+2016-07-02 18:32:47.093  WARN 10128 --- [main] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure
+2016-07-02 18:32:47.097 ERROR 10128 --- [main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:8761 - was unable to refresh its cache! status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1017) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:931) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:441) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:304) [eureka-client-1.4.6.jar!/:1.4.6]
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:51) [spring-cloud-netflix-eureka-client-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:179) [spring-cloud-netflix-eureka-client-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$75e5b0eb.CGLIB$eurekaClient$1(<generated>) [spring-cloud-netflix-eureka-client-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$75e5b0eb$$FastClassBySpringCGLIB$$7f19e43b.invoke(<generated>) [spring-cloud-netflix-eureka-client-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$75e5b0eb.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$2.getObject(AbstractBeanFactory.java:345) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:359) [spring-cloud-context-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:176) [spring-cloud-context-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:340) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) [spring-aop-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:187) [spring-aop-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at com.sun.proxy.$Proxy67.getApplications(Unknown Source) [na:na]
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerConfiguration.peerAwareInstanceRegistry(EurekaServerConfiguration.java:161) [spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerConfiguration$$EnhancerBySpringCGLIB$$381128fc.CGLIB$peerAwareInstanceRegistry$6(<generated>) [spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerConfiguration$$EnhancerBySpringCGLIB$$381128fc$$FastClassBySpringCGLIB$$4b690bb9.invoke(<generated>) [spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerConfiguration$$EnhancerBySpringCGLIB$$381128fc.peerAwareInstanceRegistry(<generated>) [spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:813) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:464) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180) [spring-boot-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at com.flopezlasanta.discovery.Application.main(Application.java:14) [discovery-0.0.1-SNAPSHOT.jar!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:54) [discovery-0.0.1-SNAPSHOT.jar!/:0.0.1-SNAPSHOT]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_45]
+
+2016-07-02 18:32:47.323  WARN 10128 --- [main] com.netflix.discovery.DiscoveryClient    : Using default backup registry implementation which does not do anything.
+2016-07-02 18:32:47.328  INFO 10128 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2016-07-02 18:32:47.334  INFO 10128 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2016-07-02 18:32:47.492  INFO 10128 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2016-07-02 18:32:47.495  INFO 10128 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2016-07-02 18:32:47.512  INFO 10128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec CloudJacksonJson
+2016-07-02 18:32:47.514  INFO 10128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec CloudJacksonJson
+2016-07-02 18:32:47.517  INFO 10128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:32:47.521  INFO 10128 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:32:47.647  INFO 10128 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2016-07-02 18:32:47.659  INFO 10128 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2016-07-02 18:32:47.662  INFO 10128 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2016-07-02 18:32:50.667  WARN 10128 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:32:50.669  INFO 10128 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:32:50.687  WARN 10128 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:32:50.689  INFO 10128 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:32:51.316  INFO 10128 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467477171316, current=UP, previous=STARTING]
+2016-07-02 18:32:51.322  INFO 10128 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:8761: registering service...
+2016-07-02 18:32:52.313  INFO 10128 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:8761 with status UP (replication=false)
+2016-07-02 18:32:52.358  INFO 10128 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:8761 - registration status: 204
+2016-07-02 18:32:52.864  INFO 10128 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:8761 with status UP (replication=true)
+2016-07-02 18:33:17.329  INFO 10128 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2016-07-02 18:33:17.355 ERROR 10128 --- [http-nio-8761-exec-4] c.s.j.spi.container.ContainerResponse    : The RuntimeException could not be mapped to a response, re-throwing to the HTTP container
+
+java.lang.NullPointerException: null
+	at com.netflix.eureka.registry.AbstractInstanceRegistry.renew(AbstractInstanceRegistry.java:379) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.renew(PeerAwareInstanceRegistryImpl.java:401) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.renew(InstanceRegistry.java:127) ~[spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at com.netflix.eureka.resources.InstanceResource.renewLease(InstanceResource.java:112) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.SubLocatorRule.accept(SubLocatorRule.java:137) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.SubLocatorRule.accept(SubLocatorRule.java:137) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1542) [jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1473) [jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1419) [jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1409) [jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:409) [jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:558) [jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:927) [jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:875) [jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:829) [jersey-servlet-1.19.1.jar!/:1.19.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:115) [spring-boot-actuator-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:103) [spring-boot-actuator-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1095) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:672) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1502) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1458) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_45]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_45]
+
+2016-07-02 18:33:18.751  INFO 10128 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2016-07-02 18:33:18.906  INFO 10128 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2016-07-02 18:33:18.909  INFO 10128 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2016-07-02 18:33:18.912  INFO 10128 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2016-07-02 18:33:18.914 ERROR 10128 --- [http-nio-8761-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.NullPointerException: null
+	at com.netflix.eureka.registry.AbstractInstanceRegistry.renew(AbstractInstanceRegistry.java:379) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.renew(PeerAwareInstanceRegistryImpl.java:401) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.renew(InstanceRegistry.java:127) ~[spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at com.netflix.eureka.resources.InstanceResource.renewLease(InstanceResource.java:112) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.SubLocatorRule.accept(SubLocatorRule.java:137) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.SubLocatorRule.accept(SubLocatorRule.java:137) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1542) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1473) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1419) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1409) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:409) ~[jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:558) ~[jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:927) ~[jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:875) ~[jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:829) ~[jersey-servlet-1.19.1.jar!/:1.19.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:115) ~[spring-boot-actuator-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:103) ~[spring-boot-actuator-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1095) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:672) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1502) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1458) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_45]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_45]
+
+2016-07-02 18:33:18.915  INFO 10128 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2016-07-02 18:33:19.068  INFO 10128 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2016-07-02 18:33:19.103  INFO 10128 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2016-07-02 18:33:19.136 ERROR 10128 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+
+javax.ws.rs.WebApplicationException: null
+	at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:827) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1383) [eureka-client-1.4.6.jar!/:1.4.6]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_45]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_45]
+
+2016-07-02 18:33:19.185  WARN 10128 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure
+2016-07-02 18:33:19.194 ERROR 10128 --- [http-nio-8761-exec-6] c.s.j.spi.container.ContainerResponse    : The RuntimeException could not be mapped to a response, re-throwing to the HTTP container
+
+java.lang.NullPointerException: null
+	at com.netflix.eureka.registry.AbstractInstanceRegistry.renew(AbstractInstanceRegistry.java:379) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.renew(PeerAwareInstanceRegistryImpl.java:401) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.renew(InstanceRegistry.java:127) ~[spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at com.netflix.eureka.resources.InstanceResource.renewLease(InstanceResource.java:112) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.SubLocatorRule.accept(SubLocatorRule.java:137) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.SubLocatorRule.accept(SubLocatorRule.java:137) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1542) [jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1473) [jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1419) [jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1409) [jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:409) [jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:558) [jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:927) [jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:875) [jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:829) [jersey-servlet-1.19.1.jar!/:1.19.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:115) [spring-boot-actuator-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:103) [spring-boot-actuator-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1095) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:672) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1502) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1458) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_45]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_45]
+
+2016-07-02 18:33:19.338 ERROR 10128 --- [http-nio-8761-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.NullPointerException: null
+	at com.netflix.eureka.registry.AbstractInstanceRegistry.renew(AbstractInstanceRegistry.java:379) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.renew(PeerAwareInstanceRegistryImpl.java:401) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.renew(InstanceRegistry.java:127) ~[spring-cloud-netflix-eureka-server-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at com.netflix.eureka.resources.InstanceResource.renewLease(InstanceResource.java:112) ~[eureka-core-1.4.6.jar!/:1.4.6]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$ResponseOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:205) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:302) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.SubLocatorRule.accept(SubLocatorRule.java:137) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.SubLocatorRule.accept(SubLocatorRule.java:137) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1542) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1473) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1419) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1409) ~[jersey-server-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:409) ~[jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:558) ~[jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:927) ~[jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:875) ~[jersey-servlet-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.spi.container.servlet.ServletContainer.doFilter(ServletContainer.java:829) ~[jersey-servlet-1.19.1.jar!/:1.19.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:115) ~[spring-boot-actuator-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:87) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:103) ~[spring-boot-actuator-1.3.5.RELEASE.jar!/:1.3.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:240) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:207) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) ~[tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:522) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1095) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:672) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1502) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1458) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_45]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.33.jar!/:8.0.33]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_45]
+
+2016-07-02 18:33:19.482 ERROR 10128 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error
+
+javax.ws.rs.WebApplicationException: null
+	at com.netflix.discovery.provider.DiscoveryJerseyProvider.readFrom(DiscoveryJerseyProvider.java:110) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:634) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.sun.jersey.api.client.ClientResponse.getEntity(ClientResponse.java:586) ~[jersey-client-1.19.1.jar!/:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:105) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:827) [eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1383) [eureka-client-1.4.6.jar!/:1.4.6]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_45]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_45]
+
+2016-07-02 18:33:19.534  WARN 10128 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failure
+2016-07-02 18:33:19.538 ERROR 10128 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:8761 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:827) ~[eureka-client-1.4.6.jar!/:1.4.6]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1383) [eureka-client-1.4.6.jar!/:1.4.6]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_45]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_45]
+
+2016-07-02 18:33:19.763  WARN 10128 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467477199763, current=DOWN, previous=UP]
+2016-07-02 18:33:19.766  INFO 10128 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:8761: registering service...
+2016-07-02 18:33:19.799  INFO 10128 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance DISCOVERY/ES00115327.ericsson.se:discovery:8761 (replication=false)
+2016-07-02 18:33:19.799  INFO 10128 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:8761 with status DOWN (replication=false)
+2016-07-02 18:33:19.806  INFO 10128 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:8761 - deregister  status: 200
+2016-07-02 18:33:19.808  INFO 10128 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:8761 - registration status: 204
+2016-07-02 18:33:19.830  INFO 10128 --- [Thread-10] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2016-07-02 18:33:19.833  INFO 10128 --- [Thread-10] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2016-07-02 18:34:29.022  WARN 8956 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 18:34:33.074  INFO 8956 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2016-07-02 18:34:33.080  INFO 8956 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2016-07-02 18:34:33.305  INFO 8956 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:34:33.307  INFO 8956 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:34:36.248  INFO 8956 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2016-07-02 18:34:36.435  INFO 8956 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2016-07-02 18:34:36.439  INFO 8956 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2016-07-02 18:34:36.582  INFO 8956 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec CloudJacksonJson
+2016-07-02 18:34:36.586  INFO 8956 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec CloudJacksonJson
+2016-07-02 18:34:36.590  INFO 8956 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:34:36.595  INFO 8956 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:34:36.779  INFO 8956 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2016-07-02 18:34:36.794  INFO 8956 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2016-07-02 18:34:36.796  INFO 8956 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2016-07-02 18:34:39.828  WARN 8956 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:34:39.831  INFO 8956 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:34:39.853  WARN 8956 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:34:39.855  INFO 8956 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:34:40.480  INFO 8956 --- [Thread-8] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2016-07-02 18:34:40.483  INFO 8956 --- [Thread-8] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2016-07-02 18:34:40.486  INFO 8956 --- [Thread-8] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2016-07-02 18:36:27.754  INFO 8956 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/ES00115327.ericsson.se:9020 with status UP (replication=false)
+2016-07-02 18:36:28.494  INFO 8956 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/ES00115327.ericsson.se:9020 with status UP (replication=true)
+2016-07-02 18:38:25.980  INFO 8956 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance UNKNOWN/ES00115327.ericsson.se:9020 (replication=false)
+2016-07-02 18:38:26.487  WARN 8956 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/ES00115327.ericsson.se:9020
+2016-07-02 18:38:26.488  INFO 8956 --- [http-nio-8761-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): UNKNOWN - ES00115327.ericsson.se:9020
+2016-07-02 18:38:26.491  WARN 8956 --- [TaskBatchingWorker-target_localhost-9] c.n.eureka.cluster.ReplicationTask       : The replication of task UNKNOWN/ES00115327.ericsson.se:9020:Cancel@localhost failed with response code 404
+2016-07-02 18:38:26.491  WARN 8956 --- [TaskBatchingWorker-target_localhost-9] c.netflix.eureka.cluster.PeerEurekaNode  : UNKNOWN/ES00115327.ericsson.se:9020:Cancel@localhost: missing entry.
+2016-07-02 18:38:32.754  INFO 8956 --- [Thread-11] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2016-07-02 18:38:32.757  INFO 8956 --- [Thread-11] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2016-07-02 18:39:26.487  WARN 1052 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 18:39:30.631  INFO 1052 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2016-07-02 18:39:30.638  INFO 1052 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2016-07-02 18:39:30.853  INFO 1052 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:39:30.858  INFO 1052 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:39:33.820  INFO 1052 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2016-07-02 18:39:34.023  INFO 1052 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2016-07-02 18:39:34.028  INFO 1052 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2016-07-02 18:39:34.252  INFO 1052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec CloudJacksonJson
+2016-07-02 18:39:34.254  INFO 1052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec CloudJacksonJson
+2016-07-02 18:39:34.258  INFO 1052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:39:34.261  INFO 1052 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:39:34.444  INFO 1052 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2016-07-02 18:39:34.458  INFO 1052 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2016-07-02 18:39:34.461  INFO 1052 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2016-07-02 18:39:37.553  WARN 1052 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:39:37.556  INFO 1052 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:39:37.579  WARN 1052 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:39:37.581  INFO 1052 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:39:38.210  INFO 1052 --- [Thread-8] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2016-07-02 18:39:38.216  INFO 1052 --- [Thread-8] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2016-07-02 18:39:38.223  INFO 1052 --- [Thread-8] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2016-07-02 18:40:36.826  INFO 1052 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PRODUCT/ES00115327.ericsson.se:product:9020 with status UP (replication=false)
+2016-07-02 18:40:37.539  INFO 1052 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PRODUCT/ES00115327.ericsson.se:product:9020 with status UP (replication=true)
+2016-07-02 18:43:13.021  INFO 1052 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 with status UP (replication=false)
+2016-07-02 18:43:13.529  INFO 1052 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 with status UP (replication=true)
+2016-07-02 18:48:58.991  INFO 1052 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 with status DOWN (replication=false)
+2016-07-02 18:48:58.992  INFO 1052 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 (replication=false)
+2016-07-02 18:48:59.498  INFO 1052 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 with status DOWN (replication=true)
+2016-07-02 18:48:59.500  INFO 1052 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 (replication=true)
+2016-07-02 18:49:03.441  INFO 1052 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PRODUCT/ES00115327.ericsson.se:product:9020 (replication=false)
+2016-07-02 18:49:03.446  INFO 1052 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PRODUCT/ES00115327.ericsson.se:product:9020 with status DOWN (replication=false)
+2016-07-02 18:49:03.950  INFO 1052 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PRODUCT/ES00115327.ericsson.se:product:9020 (replication=true)
+2016-07-02 18:49:03.953  INFO 1052 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PRODUCT/ES00115327.ericsson.se:product:9020 with status DOWN (replication=true)
+2016-07-02 18:49:06.290  INFO 1052 --- [Thread-11] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2016-07-02 18:49:06.294  INFO 1052 --- [Thread-11] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2016-07-02 18:49:41.349  WARN 10536 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 18:49:45.278  INFO 10536 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2016-07-02 18:49:45.283  INFO 10536 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2016-07-02 18:49:45.501  INFO 10536 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:49:45.504  INFO 10536 --- [localhost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:49:48.470  INFO 10536 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2016-07-02 18:49:48.663  INFO 10536 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2016-07-02 18:49:48.668  INFO 10536 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2016-07-02 18:49:48.912  INFO 10536 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec CloudJacksonJson
+2016-07-02 18:49:48.914  INFO 10536 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec CloudJacksonJson
+2016-07-02 18:49:48.917  INFO 10536 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:49:48.921  INFO 10536 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:49:49.099  INFO 10536 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2016-07-02 18:49:49.115  INFO 10536 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2016-07-02 18:49:49.118  INFO 10536 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2016-07-02 18:49:52.110  WARN 10536 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:49:52.113  INFO 10536 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:49:52.129  WARN 10536 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:49:52.131  INFO 10536 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:49:52.727  INFO 10536 --- [Thread-8] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2016-07-02 18:49:52.733  INFO 10536 --- [Thread-8] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2016-07-02 18:49:52.737  INFO 10536 --- [Thread-8] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2016-07-02 18:50:27.776  INFO 10536 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PRODUCT/ES00115327.ericsson.se:product:9020 with status UP (replication=false)
+2016-07-02 18:50:28.556  INFO 10536 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PRODUCT/ES00115327.ericsson.se:product:9020 with status UP (replication=true)
+2016-07-02 18:50:37.447  INFO 10536 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 with status UP (replication=false)
+2016-07-02 18:50:37.976  INFO 10536 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 with status UP (replication=true)
+2016-07-02 18:52:41.774  INFO 10536 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 with status DOWN (replication=false)
+2016-07-02 18:52:41.784  INFO 10536 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 (replication=false)
+2016-07-02 18:52:42.289  INFO 10536 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 with status DOWN (replication=true)
+2016-07-02 18:52:42.292  INFO 10536 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance DISCOVERY/ES00115327.ericsson.se:discovery:10000 (replication=true)
+2016-07-02 18:52:44.519  INFO 10536 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PRODUCT/ES00115327.ericsson.se:product:9020 (replication=false)
+2016-07-02 18:52:44.520  INFO 10536 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PRODUCT/ES00115327.ericsson.se:product:9020 with status DOWN (replication=false)
+2016-07-02 18:52:45.031  INFO 10536 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PRODUCT/ES00115327.ericsson.se:product:9020 (replication=true)
+2016-07-02 18:52:45.034  INFO 10536 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PRODUCT/ES00115327.ericsson.se:product:9020 with status DOWN (replication=true)
+2016-07-02 18:52:48.558  INFO 10536 --- [Thread-11] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2016-07-02 18:52:48.562  INFO 10536 --- [Thread-11] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2016-07-02 19:23:52.265  WARN 10800 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 19:24:02.173  WARN 10800 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:24:02.187  WARN 10800 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:30:21.638  WARN 10800 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: DISCOVERY/ES00115327.ericsson.se:discovery:8080
+2016-07-02 19:30:21.654  WARN 10800 --- [TaskBatchingWorker-target_localhost-4] c.n.eureka.cluster.ReplicationTask       : The replication of task DISCOVERY/ES00115327.ericsson.se:discovery:8080:Cancel@localhost failed with response code 404
+2016-07-02 19:30:21.655  WARN 10800 --- [TaskBatchingWorker-target_localhost-4] c.netflix.eureka.cluster.PeerEurekaNode  : DISCOVERY/ES00115327.ericsson.se:discovery:8080:Cancel@localhost: missing entry.
+2016-07-02 19:31:20.509  WARN 10800 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PRODUCT/ES00115327.ericsson.se:product:9020
+2016-07-02 19:31:20.511  WARN 10800 --- [TaskBatchingWorker-target_localhost-4] c.n.eureka.cluster.ReplicationTask       : The replication of task PRODUCT/ES00115327.ericsson.se:product:9020:Cancel@localhost failed with response code 404
+2016-07-02 19:31:20.512  WARN 10800 --- [TaskBatchingWorker-target_localhost-4] c.netflix.eureka.cluster.PeerEurekaNode  : PRODUCT/ES00115327.ericsson.se:product:9020:Cancel@localhost: missing entry.
+2016-07-02 19:31:53.944  WARN 4752 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 19:32:04.220  WARN 4752 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:32:04.244  WARN 4752 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:36:51.141  WARN 8932 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 19:37:01.367  WARN 8932 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:37:01.382  WARN 8932 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-04 12:23:30.253  WARN 9324 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-04 12:23:56.831  WARN 9324 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-04 12:23:56.852  WARN 9324 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-04 21:11:55.636  WARN 9324 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PRODUCT/ES00115327.ericsson.se:product:9020
+2016-07-04 21:11:55.656  WARN 9324 --- [TaskBatchingWorker-target_localhost-19] c.n.eureka.cluster.ReplicationTask       : The replication of task PRODUCT/ES00115327.ericsson.se:product:9020:Cancel@localhost failed with response code 404
+2016-07-04 21:11:55.656  WARN 9324 --- [TaskBatchingWorker-target_localhost-19] c.netflix.eureka.cluster.PeerEurekaNode  : PRODUCT/ES00115327.ericsson.se:product:9020:Cancel@localhost: missing entry.
+2016-07-05 11:44:02.254  WARN 9324 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PRODUCT/ES00115327.ericsson.se:product:9020
+2016-07-05 11:44:02.254  WARN 9324 --- [TaskBatchingWorker-target_localhost-13] c.n.eureka.cluster.ReplicationTask       : The replication of task PRODUCT/ES00115327.ericsson.se:product:9020:Cancel@localhost failed with response code 404
+2016-07-05 11:44:02.254  WARN 9324 --- [TaskBatchingWorker-target_localhost-13] c.netflix.eureka.cluster.PeerEurekaNode  : PRODUCT/ES00115327.ericsson.se:product:9020:Cancel@localhost: missing entry.
+2016-07-05 11:52:12.670  WARN 9324 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: PRODUCT - ES00115327.ericsson.se:product:9020
+2016-07-05 11:52:12.670  WARN 9324 --- [http-nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Renew): PRODUCT - ES00115327.ericsson.se:product:9020
+2016-07-05 11:52:12.680  WARN 9324 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PRODUCT/ES00115327.ericsson.se:product:9020
+2016-07-05 11:52:12.700  WARN 9324 --- [TaskBatchingWorker-target_localhost-19] c.n.eureka.cluster.ReplicationTask       : The replication of task PRODUCT/ES00115327.ericsson.se:product:9020:Heartbeat@localhost failed with response code 404
+2016-07-05 11:52:12.700  WARN 9324 --- [TaskBatchingWorker-target_localhost-19] c.netflix.eureka.cluster.PeerEurekaNode  : PRODUCT/ES00115327.ericsson.se:product:9020:Heartbeat@localhost: missing entry.
+2016-07-05 11:52:12.700  WARN 9324 --- [TaskBatchingWorker-target_localhost-19] c.netflix.eureka.cluster.PeerEurekaNode  : PRODUCT/ES00115327.ericsson.se:product:9020:Heartbeat@localhost: cannot find instance id ES00115327.ericsson.se:product:9020 and hence replicating the instance with status UP
+2016-07-05 11:52:12.700  WARN 9324 --- [TaskBatchingWorker-target_localhost-19] c.n.eureka.cluster.ReplicationTask       : The replication of task PRODUCT/ES00115327.ericsson.se:product:9020:Cancel@localhost failed with response code 404
+2016-07-05 11:52:12.700  WARN 9324 --- [TaskBatchingWorker-target_localhost-19] c.netflix.eureka.cluster.PeerEurekaNode  : PRODUCT/ES00115327.ericsson.se:product:9020:Cancel@localhost: missing entry.

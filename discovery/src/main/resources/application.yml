@@ -1,0 +1,35 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discovery
+  main:
+    banner-mode: "off"
+  mvc:
+    favicon:
+      enabled: false
+      
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    peer-eureka-status-refresh-time-interval-ms: 1000
+
+logging:
+  level:
+    ROOT: WARN
+    c.n: WARN
+    org.springframework: WARN
+    org.apache: WARN    
+    com.netflix: WARN
+  file: ./logs/discovery.log
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false

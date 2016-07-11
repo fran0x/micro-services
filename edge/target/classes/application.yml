@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: edge
+  main:
+    banner-mode: "off"
+  mvc:
+    favicon:
+      enabled: false
+    
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true  
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    eureka:
+      path: /eureka/**
+      url: http://localhost:8761/eureka 
+    product:
+      path: /product/**
+      url: http://localhost:9020/product
+
+logging:
+  level:
+    ROOT: WARN
+    c.n: WARN
+    org.springframework: WARN
+    org.apache: WARN    
+    com.netflix: WARN
+  file: ./logs/edge.log
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+  

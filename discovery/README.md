@@ -1,0 +1,1 @@
+App for service auto-discovery based on Spring Cloud and Netflix Eureka

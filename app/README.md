@@ -1,0 +1,1 @@
+Simple app based on Spring Boot

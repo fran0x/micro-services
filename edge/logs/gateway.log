@@ -1,0 +1,293 @@
+2016-07-02 18:42:57.382  WARN 920 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 18:43:04.118  WARN 920 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:43:04.119  INFO 920 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:43:04.143  INFO 920 --- [localhost-startStop-1] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1ee726a
+2016-07-02 18:43:09.725  WARN 920 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:43:09.726  INFO 920 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:43:10.633  INFO 920 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2016-07-02 18:43:10.636  INFO 920 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2016-07-02 18:43:10.902  INFO 920 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:43:10.903  INFO 920 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:43:11.299  INFO 920 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-02 18:43:12.532  INFO 920 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2016-07-02 18:43:12.532  INFO 920 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2016-07-02 18:43:12.533  INFO 920 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2016-07-02 18:43:12.533  INFO 920 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2016-07-02 18:43:12.534  INFO 920 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2016-07-02 18:43:12.537  INFO 920 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2016-07-02 18:43:12.540  INFO 920 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2016-07-02 18:43:12.850  INFO 920 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2016-07-02 18:43:12.855  INFO 920 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2016-07-02 18:43:12.861  INFO 920 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2016-07-02 18:43:12.955  INFO 920 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467477792955, current=UP, previous=STARTING]
+2016-07-02 18:43:12.962  INFO 920 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:10000: registering service...
+2016-07-02 18:43:13.023  INFO 920 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:10000 - registration status: 204
+2016-07-02 18:43:48.363  INFO 920 --- [http-nio-10000-exec-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: product.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2016-07-02 18:43:48.399  INFO 920 --- [http-nio-10000-exec-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-product
+2016-07-02 18:43:48.456  INFO 920 --- [http-nio-10000-exec-1] c.netflix.loadbalancer.BaseLoadBalancer  : Client:product instantiated a LoadBalancer:DynamicServerListLoadBalancer:{NFLoadBalancer:name=product,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2016-07-02 18:43:48.496  INFO 920 --- [http-nio-10000-exec-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: product.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2016-07-02 18:43:48.500  INFO 920 --- [http-nio-10000-exec-1] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client product initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=product,current list of Servers=[192.168.56.1:9020],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.56.1:9020;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 01:00:00 CET 1970;	First connection made: Thu Jan 01 01:00:00 CET 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@16da7a2
+2016-07-02 18:43:48.606  INFO 920 --- [http-nio-10000-exec-1] com.netflix.http4.ConnectionPoolCleaner  : Initializing ConnectionPoolCleaner for NFHttpClient:product
+2016-07-02 18:43:49.467  INFO 920 --- [pool-10-thread-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: product.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2016-07-02 18:48:12.562  INFO 920 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-02 18:48:58.963  INFO 920 --- [Thread-6] c.n.l.DynamicServerListLoadBalancer      : Shutting down the Executor Pool for DynamicServerListLoadBalancer
+2016-07-02 18:48:58.967  WARN 920 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467478138967, current=DOWN, previous=UP]
+2016-07-02 18:48:58.976  INFO 920 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:10000: registering service...
+2016-07-02 18:48:58.993  INFO 920 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:10000 - registration status: 204
+2016-07-02 18:48:58.998  INFO 920 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:10000 - deregister  status: 200
+2016-07-02 18:48:59.038  WARN 920 --- [Thread-5] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent
+
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while the singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:254) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:224) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:144) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:106) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:381) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:335) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:967) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:934) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:66) [spring-cloud-context-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:262) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:972) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:979) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1006) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:982) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:901) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+
+2016-07-02 18:48:59.099  INFO 920 --- [Thread-5] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-product
+2016-07-02 18:48:59.108  INFO 920 --- [Thread-5] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.Runtime.removeShutdownHook(Unknown Source) ~[na:1.8.0_45]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.1.1.jar!/:na]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:614) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:886) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:375) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at com.netflix.niws.client.http.RestClient.shutdown(RestClient.java:725) [ribbon-httpclient-2.1.5.jar!/:2.1.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:354) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:277) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:972) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:979) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1006) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:982) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:934) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:66) [spring-cloud-context-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:262) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:972) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:979) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1006) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:982) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:901) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+
+2016-07-02 18:48:59.176  INFO 920 --- [Thread-5] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-product
+2016-07-02 18:48:59.178  INFO 920 --- [Thread-5] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.Runtime.removeShutdownHook(Unknown Source) ~[na:1.8.0_45]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.1.1.jar!/:na]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:614) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:886) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:375) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:354) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:277) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:972) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:979) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1006) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:982) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:934) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:66) [spring-cloud-context-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:262) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:972) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:979) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1006) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:982) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:901) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+
+2016-07-02 18:50:19.792  WARN 9844 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 18:50:28.511  WARN 9844 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:50:28.514  INFO 9844 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:50:28.549  INFO 9844 --- [localhost-startStop-1] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@bb01eb
+2016-07-02 18:50:33.645  WARN 9844 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 18:50:33.646  INFO 9844 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-02 18:50:34.587  INFO 9844 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2016-07-02 18:50:34.590  INFO 9844 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2016-07-02 18:50:34.852  INFO 9844 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-02 18:50:34.853  INFO 9844 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-02 18:50:35.266  INFO 9844 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-02 18:50:36.846  INFO 9844 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2016-07-02 18:50:36.846  INFO 9844 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2016-07-02 18:50:36.847  INFO 9844 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2016-07-02 18:50:36.847  INFO 9844 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2016-07-02 18:50:36.848  INFO 9844 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2016-07-02 18:50:36.849  INFO 9844 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2016-07-02 18:50:36.849  INFO 9844 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2016-07-02 18:50:37.254  INFO 9844 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2016-07-02 18:50:37.258  INFO 9844 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2016-07-02 18:50:37.265  INFO 9844 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2016-07-02 18:50:37.383  INFO 9844 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467478237383, current=UP, previous=STARTING]
+2016-07-02 18:50:37.386  INFO 9844 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:10000: registering service...
+2016-07-02 18:50:37.455  INFO 9844 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:10000 - registration status: 204
+2016-07-02 18:51:26.436  INFO 9844 --- [http-nio-10000-exec-6] c.netflix.config.ChainedDynamicProperty  : Flipping property: product.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2016-07-02 18:51:26.513  INFO 9844 --- [http-nio-10000-exec-6] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-product
+2016-07-02 18:51:26.566  INFO 9844 --- [http-nio-10000-exec-6] c.netflix.loadbalancer.BaseLoadBalancer  : Client:product instantiated a LoadBalancer:DynamicServerListLoadBalancer:{NFLoadBalancer:name=product,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2016-07-02 18:51:26.618  INFO 9844 --- [http-nio-10000-exec-6] c.netflix.config.ChainedDynamicProperty  : Flipping property: product.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2016-07-02 18:51:26.622  INFO 9844 --- [http-nio-10000-exec-6] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client product initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=product,current list of Servers=[192.168.56.1:9020],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.56.1:9020;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 01:00:00 CET 1970;	First connection made: Thu Jan 01 01:00:00 CET 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@38ce06
+2016-07-02 18:51:26.733  INFO 9844 --- [http-nio-10000-exec-6] com.netflix.http4.ConnectionPoolCleaner  : Initializing ConnectionPoolCleaner for NFHttpClient:product
+2016-07-02 18:51:27.575  INFO 9844 --- [pool-10-thread-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: product.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2016-07-02 18:52:41.741  INFO 9844 --- [Thread-6] c.n.l.DynamicServerListLoadBalancer      : Shutting down the Executor Pool for DynamicServerListLoadBalancer
+2016-07-02 18:52:41.743  WARN 9844 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467478361743, current=DOWN, previous=UP]
+2016-07-02 18:52:41.755  INFO 9844 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:10000: registering service...
+2016-07-02 18:52:41.777  INFO 9844 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:10000 - registration status: 204
+2016-07-02 18:52:41.787  INFO 9844 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DISCOVERY/ES00115327.ericsson.se:discovery:10000 - deregister  status: 200
+2016-07-02 18:52:41.827  WARN 9844 --- [Thread-5] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent
+
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while the singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1054) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:254) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:224) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:144) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:106) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:381) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:335) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:967) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:934) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:66) [spring-cloud-context-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:262) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:972) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:979) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1006) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:982) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:901) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+
+2016-07-02 18:52:41.876  INFO 9844 --- [Thread-5] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-product
+2016-07-02 18:52:41.880  INFO 9844 --- [Thread-5] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.Runtime.removeShutdownHook(Unknown Source) ~[na:1.8.0_45]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.1.1.jar!/:na]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:614) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:886) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:375) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at com.netflix.niws.client.http.RestClient.shutdown(RestClient.java:725) [ribbon-httpclient-2.1.5.jar!/:2.1.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:354) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:277) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:972) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:979) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1006) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:982) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:934) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:66) [spring-cloud-context-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:262) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:972) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:979) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1006) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:982) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:901) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+
+2016-07-02 18:52:41.940  INFO 9844 --- [Thread-5] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-product
+2016-07-02 18:52:41.943  INFO 9844 --- [Thread-5] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.Runtime.removeShutdownHook(Unknown Source) ~[na:1.8.0_45]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.1.1.jar!/:na]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:614) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:886) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:375) [ribbon-loadbalancer-2.1.5.jar!/:2.1.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_45]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:354) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:277) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:972) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:979) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1006) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:982) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:934) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:66) [spring-cloud-context-1.1.0.RELEASE.jar!/:1.1.0.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:262) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:972) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:979) [spring-beans-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1006) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:982) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:901) [spring-context-4.2.6.RELEASE.jar!/:4.2.6.RELEASE]
+
+2016-07-02 19:24:33.990  WARN 580 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 19:24:40.576  WARN 580 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:24:45.049  WARN 580 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:30:21.091  WARN 580 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467480621091, current=DOWN, previous=UP]
+2016-07-02 19:30:21.166  WARN 580 --- [Thread-5] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:32:24.372  WARN 10008 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 19:32:33.268  WARN 10008 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:32:38.567  WARN 10008 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:34:19.277  WARN 10008 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467480859277, current=DOWN, previous=UP]
+2016-07-02 19:34:19.339  WARN 10008 --- [Thread-5] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:37:28.709  WARN 8132 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-02 19:37:37.359  WARN 8132 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:37:43.119  WARN 8132 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-02 19:38:11.771  WARN 8132 --- [http-nio-8080-exec-1] o.s.c.n.zuul.web.ZuulHandlerMapping      : No routes found from RouteLocator
+2016-07-02 19:41:56.091  WARN 8132 --- [Thread-5] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467481316091, current=DOWN, previous=UP]
+2016-07-02 19:41:56.161  WARN 8132 --- [Thread-5] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
